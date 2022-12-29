@@ -1,5 +1,6 @@
 <script setup>
 import ButtonCircle from "./ButtonCircle.vue";
+import DribbbleIcon from "./icons/DribbbleIcon.vue";
 import GithubIcon from "./icons/GithubIcon.vue";
 import LinkIcon from "./icons/LinkIcon.vue";
 
@@ -18,7 +19,7 @@ const projects = [
         name: "Quotes App Design",
         description: "Made with Figma",
         links : {
-            dribble: 'https://github.com/ridoananda/quran-app',
+            dribbble: 'https://dribbble.com/shots/20243742-Quotes-App-Design',
         }
     },
     {
@@ -26,7 +27,7 @@ const projects = [
         name: "Company Landing Page + System",
         description: "Made with Laravel + Inertia + Vue JS 3 + Tailwind CSS",
         links : {
-            demo: 'sadf',
+            demo: 'https://prokoin.sentratanisejahtera.com',
             // github: 'https://github.com/ridoananda/quran-app'
         }
     },
@@ -51,14 +52,19 @@ const projects = [
                     <p class="text-paragraph text-sm sm:text-base">{{ project.description }}</p>
                 </div>
                 <div class="flex items-center gap-x-3 text-gray-200">
-                    <a :href="project.links.demo" v-if="project.links.demo">
+                    <a :href="project.links.demo" v-if="project.links.demo" target="_blank">
                         <ButtonCircle size="sm">
                             <LinkIcon />
                         </ButtonCircle>
                     </a>
-                    <a :href="project.links.github" v-if="project.links.github">
+                    <a :href="project.links.github" v-if="project.links.github" target="_blank">
                         <ButtonCircle size="sm">
                             <GithubIcon />
+                        </ButtonCircle>
+                    </a>
+                    <a :href="project.links.dribbble" v-if="project.links.dribbble" target="_blank">
+                        <ButtonCircle size="sm">
+                            <DribbbleIcon />
                         </ButtonCircle>
                     </a>
                 </div>
