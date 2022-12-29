@@ -45,7 +45,7 @@ const projects = [
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="flex flex-col" v-for="(project, i) in projects" :key="i">
-            <img :src="`/images/projects/${project.image}`" class="w-full" />
+            <img :src="`images/projects/${project.image}`" class="w-full" />
             <div class="flex items-center justify-between mt-3 gap-x-3">
                 <div>
                     <h5 class="font-head font-bold text-xl sm:text-2xl">{{ project.name }}</h5>
