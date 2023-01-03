@@ -14,7 +14,7 @@ const props = defineProps({
         :class="size"
     >
         <div
-            class="flex items-center justify-center p-2 hover:scale-100 scale-95 transform transition duration-100 cursor-pointer text-gray-200"
+            class="flex items-center justify-center hover:scale-100 scale-95 transform transition duration-100 cursor-pointer text-gray-200"
             :class="size"
         >
             <slot></slot>
@@ -26,7 +26,7 @@ const props = defineProps({
     @apply w-11 h-11
 }
 .sm {
-    @apply w-10 h-10
+    @apply w-9 h-9 p-1.5 sm:p-2 sm:w-10 sm:h-10
 }
 .lg {
     @apply w-12 h-12
