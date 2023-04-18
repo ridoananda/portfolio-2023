@@ -1,5 +1,6 @@
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
+import { RouterLink } from "vue-router";
 
 const { x, y } = useWindowScroll();
 </script>
@@ -13,9 +14,9 @@ const { x, y } = useWindowScroll();
             <h1 class="font-head text-lg font-extrabold">Rido Ananda</h1>
         </div>
         <div class="flex items-center gap-x-20 font-head">
-            <a class="font-bold">Project</a>
-            <a class="font-bold">Blog</a>
-            <a class="font-bold">Contact</a>
+            <RouterLink :to="{ name: 'project' }" class="font-bold">Project</RouterLink>
+            <a href="https://blog.ridoananda.com" target="_blank" class="font-bold">Blog</a>
+            <a href="mailto:ridoananda123@gmail.com" class="font-bold">Contact</a>
         </div>
         <a
             href="mailto:ridoananda123@gmail.com"

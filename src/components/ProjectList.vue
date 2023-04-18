@@ -6,12 +6,20 @@ import LinkIcon from "./icons/LinkIcon.vue";
 
 const projects = [
     {
-        image: "quran.png",
-        name: "Digital Qur'an",
-        description: "Made with Vue JS 3 + Tailwind CSS",
+        image: "gaming.png",
+        name: "Game Company Landing Page",
+        description: "Made with Vue JS 3 + Tailwind CSS Design with Figma",
         links: {
-            demo: "https://ridoananda.github.io/quran-app/#/",
-            github: "https://github.com/ridoananda/quran-app",
+            demo: "https://gaming.ridoananda.my.id",
+            github: "https://github.com/ridoananda/gaming-production",
+        },
+    },
+    {
+        image: "prokoin.png",
+        name: "Company Landing Page + System",
+        description: "Made with Laravel + Inertia + Vue JS 3 + Tailwind CSS",
+        links: {
+            demo: "https://prokoin.sentratanisejahtera.com",
         },
     },
     {
@@ -23,21 +31,20 @@ const projects = [
         },
     },
     {
-        image: "prokoin.png",
-        name: "Company Landing Page + System",
-        description: "Made with Laravel + Inertia + Vue JS 3 + Tailwind CSS",
+        image: "yapim.png",
+        name: "School Information Website",
+        description: "Made with Laravel + Vue JS 2 + Bootstrap",
         links: {
-            demo: "https://prokoin.sentratanisejahtera.com",
-            // github: 'https://github.com/ridoananda/quran-app'
+            demo: "https://yapim.ridoananda.com",
         },
     },
     {
-        image: "gaming.png",
-        name: "Game Company Landing Page",
-        description: "Made with Vue JS 3 + Tailwind CSS Design with Figma",
+        image: "quran.png",
+        name: "Digital Qur'an",
+        description: "Made with Vue JS 3 + Tailwind CSS",
         links: {
-            demo: "https://gaming.ridoananda.my.id",
-            github: "https://github.com/ridoananda/gaming-production",
+            demo: "https://ridoananda.github.io/quran-app/#/",
+            github: "https://github.com/ridoananda/quran-app",
         },
     },
 ];
@@ -46,7 +53,10 @@ const projects = [
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="flex flex-col gap-y-3" v-for="(project, i) in projects" :key="i">
             <router-link :to="'/project/' + (project.links.detail || '')">
-                <img :src="`images/projects/${project.image}`" class="w-full transform scale-100 object-cover object-top hover:object-contain hover:scale-105 transition" />
+                <img
+                    :src="`images/projects/${project.image}`"
+                    class="w-full transform scale-100 object-cover object-top hover:object-contain hover:scale-105 transition"
+                />
             </router-link>
             <div>
                 <h5 class="font-head font-bold text-xl sm:text-2xl">{{ project.name }}</h5>
@@ -55,23 +65,23 @@ const projects = [
             <div class="flex items-center justify-between gap-x-3">
                 <div class="flex items-center gap-x-3 text-gray-200">
                     <a :href="project.links.demo" v-if="project.links.demo" target="_blank">
-                        <ButtonCircle size="sm">
+                        <ButtonCircle size="sm" title="Demo">
                             <LinkIcon />
                         </ButtonCircle>
                     </a>
                     <a :href="project.links.github" v-if="project.links.github" target="_blank">
-                        <ButtonCircle size="sm">
+                        <ButtonCircle size="sm" title="Github">
                             <GithubIcon />
                         </ButtonCircle>
                     </a>
                     <a :href="project.links.dribbble" v-if="project.links.dribbble" target="_blank">
-                        <ButtonCircle size="sm">
+                        <ButtonCircle size="sm" title="Dribbble">
                             <DribbbleIcon />
                         </ButtonCircle>
                     </a>
                 </div>
                 <router-link
-                    :to="'/project/'+ (project.links.detail || '')"
+                    :to="project.links.detail ? '/project/' + project.links.detail : '#'"
                     class="rounded-full border border-border bg-secondary flex items-center justify-center hover:bg-zinc-700 hover:border-zinc-500 hover:shadow-md py-1 px-3 text-gray-200 text-sm md:text-base gap-x-1.5"
                 >
                     <span class="font-medium">Detail</span>

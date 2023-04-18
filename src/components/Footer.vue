@@ -41,16 +41,24 @@ import WhatsappIcon from "./icons/WhatsappIcon.vue";
             </a>
         </div>
         <div class="absolute bottom-4 font-bold">Design with ❤ Figma by Rido Ananda</div>
-        <BoxDecoration class="absolute opacity-40 shadow-none transform rotate-12 top-10 md:top-14 right-4 md:right-24 lg:right-44">
+        <BoxDecoration
+            class="absolute opacity-40 shadow-none transform rotate-12 top-10 md:top-14 right-4 md:right-24 lg:right-44"
+        >
             <img src="/images/figma.png" alt="Figma" />
         </BoxDecoration>
-        <BoxDecoration class="absolute opacity-40 shadow-none transform rotate-12 bottom-14 left-4 md:left-24 lg:left-44">
+        <BoxDecoration
+            class="absolute opacity-40 shadow-none transform rotate-12 bottom-14 left-4 md:left-24 lg:left-44"
+        >
             <img src="/images/vue.png" alt="Figma" />
         </BoxDecoration>
-        <BoxDecoration class="absolute opacity-40 shadow-none transform -rotate-12 top-10 md:top-14 left-4 md:left-24 lg:left-44">
+        <BoxDecoration
+            class="absolute opacity-40 shadow-none transform -rotate-12 top-10 md:top-14 left-4 md:left-24 lg:left-44"
+        >
             <img src="/images/laravel.png" alt="Figma" />
         </BoxDecoration>
-        <BoxDecoration class="absolute opacity-40 shadow-none transform rotate-12 bottom-14 right-4 md:right-24 lg:right-44">
+        <BoxDecoration
+            class="absolute opacity-40 shadow-none transform -rotate-12 bottom-14 right-4 md:right-24 lg:right-44"
+        >
             <img src="/images/vscode.png" alt="Figma" />
         </BoxDecoration>
     </div>
