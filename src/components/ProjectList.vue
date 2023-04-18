@@ -81,7 +81,8 @@ const projects = [
                     </a>
                 </div>
                 <router-link
-                    :to="project.links.detail ? '/project/' + project.links.detail : '#'"
+                    v-if="project.links.detail"
+                    :to="/project/ + project.links.detail"
                     class="rounded-full border border-border bg-secondary flex items-center justify-center hover:bg-zinc-700 hover:border-zinc-500 hover:shadow-md py-1 px-3 text-gray-200 text-sm md:text-base gap-x-1.5"
                 >
                     <span class="font-medium">Detail</span>
