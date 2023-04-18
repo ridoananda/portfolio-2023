@@ -11,7 +11,7 @@ const { x, y } = useWindowScroll();
     >
         <RouterLink to="/" class="flex items-center gap-x-3">
             <img src="/images/logo.png" class="w-10 h-10" />
-            <h1 class="font-head text-lg font-extrabold">Rido Ananda</h1>
+            <h1 class="font-head text-lg font-extrabold text-white">Rido Ananda</h1>
         </RouterLink>
         <div class="flex items-center gap-x-20 font-head">
             <RouterLink to="/" class="font-bold">Home</RouterLink>
