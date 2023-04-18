@@ -9,11 +9,12 @@ const { x, y } = useWindowScroll();
         class="hidden lg:flex items-center justify-between px-10 py-2 h-16 sticky top-0 bg-background z-50 transition-colors duration-300"
         :class="{ 'bg-secondary/95 backdrop-blur-sm': y >= 55 }"
     >
-        <div class="flex items-center gap-x-3">
+        <RouterLink to="/" class="flex items-center gap-x-3">
             <img src="/images/logo.png" class="w-10 h-10" />
             <h1 class="font-head text-lg font-extrabold">Rido Ananda</h1>
-        </div>
+        </RouterLink>
         <div class="flex items-center gap-x-20 font-head">
+            <RouterLink to="/" class="font-bold">Home</RouterLink>
             <RouterLink :to="{ name: 'project' }" class="font-bold">Project</RouterLink>
             <a href="https://blog.ridoananda.com" target="_blank" class="font-bold">Blog</a>
             <a href="mailto:ridoananda123@gmail.com" class="font-bold">Contact</a>

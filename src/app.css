@@ -6,3 +6,6 @@
 html {
     @apply scroll-smooth;
 }
+.router-link-active {
+    @apply text-primary;
+}
