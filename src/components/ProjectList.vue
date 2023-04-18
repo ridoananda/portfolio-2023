@@ -3,61 +3,17 @@ import ButtonCircle from "./ButtonCircle.vue";
 import DribbbleIcon from "./icons/DribbbleIcon.vue";
 import GithubIcon from "./icons/GithubIcon.vue";
 import LinkIcon from "./icons/LinkIcon.vue";
-
-const projects = [
-    {
-        image: "gaming.png",
-        name: "Game Company Landing Page",
-        description: "Made with Vue JS 3 + Tailwind CSS Design with Figma",
-        links: {
-            demo: "https://gaming.ridoananda.my.id",
-            github: "https://github.com/ridoananda/gaming-production",
-        },
-    },
-    {
-        image: "prokoin.png",
-        name: "Company Landing Page + System",
-        description: "Made with Laravel + Inertia + Vue JS 3 + Tailwind CSS",
-        links: {
-            demo: "https://prokoin.sentratanisejahtera.com",
-        },
-    },
-    {
-        image: "quotes-app.png",
-        name: "Quotes App Design",
-        description: "Made with Figma",
-        links: {
-            dribbble: "https://dribbble.com/shots/20243742-Quotes-App-Design",
-        },
-    },
-    {
-        image: "yapim.png",
-        name: "School Information Website",
-        description: "Made with Laravel + Vue JS 2 + Bootstrap",
-        links: {
-            demo: "https://yapim.ridoananda.com",
-        },
-    },
-    {
-        image: "quran.png",
-        name: "Digital Qur'an",
-        description: "Made with Vue JS 3 + Tailwind CSS",
-        links: {
-            demo: "https://ridoananda.github.io/quran-app/#/",
-            github: "https://github.com/ridoananda/quran-app",
-        },
-    },
-];
+import projects from "@/config/projects";
 </script>
 <template>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="flex flex-col gap-y-3" v-for="(project, i) in projects" :key="i">
-            <router-link :to="'/project/' + (project.links.detail || '')">
+            <a :href="project.links.demo || '#'" target="_blank">
                 <img
                     :src="`images/projects/${project.image}`"
                     class="w-full transform scale-100 object-cover object-top hover:object-contain hover:scale-105 transition"
                 />
-            </router-link>
+            </a>
             <div>
                 <h5 class="font-head font-bold text-xl sm:text-2xl">{{ project.name }}</h5>
                 <p class="text-paragraph text-sm sm:text-base">{{ project.description }}</p>
