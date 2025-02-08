@@ -16,10 +16,10 @@ module.exports = {
                 border: '#3F3F46',
                 paragraph: colors.gray[300],
                 // Social Media
-                whatsapp: {
-                    'teal-green': '#075E54',
-                    'light-green': '#25d366',
-                }
+                // whatsapp: {
+                //     'teal-green': '#075E54',
+                //     'light-green': '#25d366',
+                // }
             },
             fontFamily: {
                 head: ['"Catamaran"', ...defaultTheme.fontFamily.serif],

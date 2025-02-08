@@ -1,14 +1,21 @@
 <script setup>
 import Button from "./Button.vue";
+import AppConfig from "../AppConfig";
 </script>
+
 <template>
     <div class="grid grid-cols-12">
         <div class="col-span-10 col-start-2">
-            <div class="py-3 px-4 md:px-5 md:h-20 bg-secondary rounded-md flex flex-col md:flex-row items-center justify-between">
-                <h1 class="font-head font-bold text-xl text-center md:text-left lg:text-2xl mb-3 md:mb-0">Interested Working with me?</h1>
+            <div
+                class="py-3 px-4 md:px-5 md:h-20 bg-secondary rounded-md flex flex-col md:flex-row items-center justify-between"
+            >
+                <h1 class="font-head font-bold text-xl text-center md:text-left lg:text-2xl mb-3 md:mb-0">
+                    Interested Working with me?
+                </h1>
                 <div class="flex items-center gap-x-2 md:gap-x-4 text-sm md:text-base">
                     <a href="#" class="border border-border py-1.5 px-4 rounded-md">See More Project</a>
-                    <a href="mailto:ridoananda123@gmail.com">
+                    <a :href="`mailto:${AppConfig.email}`">
+                        <!-- Updated mailto link -->
                         <Button class="flex items-center gap-x-2 rounded-md">
                             <svg
                                 width="18"
