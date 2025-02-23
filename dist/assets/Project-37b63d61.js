@@ -1,0 +1,1 @@
+import{c as s,d as a,e as c}from"./Project-da4578ba.js";import{c as t,e,o as _}from"./index-2ea1a628.js";const o={class:"pt-12 space-y-20"},f={__name:"Project",setup(r){return(n,m)=>(_(),t("div",o,[e(s),e(a),e(c)]))}};export{f as default};
